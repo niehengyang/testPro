@@ -22,3 +22,14 @@ $factory->define(App\User::class, function (Faker $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+//填充管理员数据
+$factory->define(App\Model\Admin::class, function (Faker $faker) {
+    static $password;
+
+    return [
+        'admin_username' => $faker->firstName,
+        'admin_password' => $password ?: $password = bcrypt('secret'),
+        'remember_token' => str_random(10),
+    ];
+});
