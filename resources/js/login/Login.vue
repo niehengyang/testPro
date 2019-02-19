@@ -1,11 +1,11 @@
 <template>
-    <div>
+    <div class="login-form">
         <el-form ref="form" :model="adminLoginForm" label-width="80px">
             <el-form-item label="账号名" prop="admin_username">
-                <el-input v-model="adminLoginForm.admin_username"  placeholder="请输入用户名"></el-input>
+                <el-input class="username-input" v-model="adminLoginForm.admin_username"  placeholder="请输入用户名"></el-input>
             </el-form-item>
             <el-form-item label="密码" prop="admin_password">
-                <el-input v-model="adminLoginForm.admin_password" placeholder="请输入密码"></el-input>
+                <el-input class="password-input" v-model="adminLoginForm.admin_password" placeholder="请输入密码"></el-input>
             </el-form-item>
             <el-form-item>
                 <el-button type="primary" @click="onLoginSubmit">立即登陆</el-button>
@@ -21,7 +21,6 @@
         data(){
             return{
                 adminLoginForm: {admin_username: '',admin_password: ''},
-
             }
         },
         created() {
@@ -41,6 +40,12 @@
     }
 </script>
 
-<style scoped>
-
+<style scoped lang="sass">
+    .login-form
+        width: 360px
+        height: 300px
+        .username-input
+            width: 360px
+        .password-input
+            width: 360px
 </style>

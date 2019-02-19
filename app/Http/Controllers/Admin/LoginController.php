@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Model\Admin;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -20,6 +21,8 @@ class LoginController extends Controller
    |
    */
 
+//    use AuthenticatesUsers;
+
     /**
      * 处理登录逻辑
      */
@@ -34,7 +37,7 @@ class LoginController extends Controller
             $adminPassword = $request->get('admin_password');
             $rememberMe = $request->get('rememberMe');
 
-            if(Auth::guard('admin')->attempt(['admin_username'=>$adminCellphone, 'admin_password'=>$adminPassword],$rememberMe)) {
+            if($this->guard()->attempt(['admin_username'=>$adminCellphone, 'admin_password'=>$adminPassword],$rememberMe)) {
                 // 更新最后登录的IP地址与时间
                 $admin = Admin::where('admin_username',$adminCellphone)->first();
 //                $admin->admin_lastloginip = $request->getClientIp();
@@ -91,6 +94,15 @@ class LoginController extends Controller
         return view('admin.login');
     }
 
+    /*
+    * 重写验证时使用的用户名字段
+    * */
+
+    public function username()
+    {
+        return 'admin_username';
+    }
+
 
     /*
      * 使用admin guard
@@ -98,15 +110,8 @@ class LoginController extends Controller
      * */
     protected function guard()
     {
-        return auth()->guard('admin');
+        return Auth::guard('admin');
     }
 
-    /*
-     * 重写验证时使用的用户名字段
-     * */
 
-    public function username()
-    {
-        return 'admin_name';
-    }
 }
