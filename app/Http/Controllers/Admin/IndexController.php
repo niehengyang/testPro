@@ -12,6 +12,6 @@ class IndexController extends Controller
      * */
 
     public function index(){
-        redirect('/helloadmin');
+        return view('admin.index');
     }
 }

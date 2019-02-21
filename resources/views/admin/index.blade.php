@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{mix('css/admin.css')}}">
 </head>
 <body>
-<div id="admin"></div>
+<div id="index"></div>
 <script src="{{mix('js/manifest.js')}}"></script>
 <script src="{{mix('js/vendor.js')}}"></script>
 <script src="{{mix('js/admin.js')}}"></script>

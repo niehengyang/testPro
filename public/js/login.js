@@ -1654,13 +1654,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   // name: "Login"
   data: function data() {
     return {
       adminLoginForm: {
-        admin_username: '',
-        admin_password: ''
+        admin_name: '',
+        password: ''
       }
     };
   },
@@ -7943,7 +7944,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".login-form[data-v-646d5095] {\n  width: 360px;\n  height: 300px;\n}\n.login-form .username-input[data-v-646d5095] {\n  width: 360px;\n}\n.login-form .password-input[data-v-646d5095] {\n  width: 360px;\n}", ""]);
+exports.push([module.i, ".page[data-v-646d5095] {\n  width: 100%;\n  height: 100%;\n}\n.page .login-form-box[data-v-646d5095] {\n  width: 360px;\n  height: 300px;\n}\n.page .login-form-box .login-form .username-input[data-v-646d5095] {\n  width: 360px;\n}\n.page .login-form-box .login-form .password-input[data-v-646d5095] {\n  width: 360px;\n}", ""]);
 
 // exports
 
@@ -40904,77 +40905,80 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "login-form" },
-    [
-      _c(
-        "el-form",
-        {
-          ref: "form",
-          attrs: { model: _vm.adminLoginForm, "label-width": "80px" }
-        },
-        [
-          _c(
-            "el-form-item",
-            { attrs: { label: "账号名", prop: "admin_username" } },
-            [
-              _c("el-input", {
-                staticClass: "username-input",
-                attrs: { placeholder: "请输入用户名" },
-                model: {
-                  value: _vm.adminLoginForm.admin_username,
-                  callback: function($$v) {
-                    _vm.$set(_vm.adminLoginForm, "admin_username", $$v)
+  return _c("div", { staticClass: "page" }, [
+    _c(
+      "div",
+      { staticClass: "login-form-box" },
+      [
+        _c(
+          "el-form",
+          {
+            ref: "adminLoginForm",
+            staticClass: "login-form",
+            attrs: { model: _vm.adminLoginForm, "label-width": "80px" }
+          },
+          [
+            _c(
+              "el-form-item",
+              { attrs: { label: "账号名", prop: "admin_name" } },
+              [
+                _c("el-input", {
+                  staticClass: "username-input",
+                  attrs: { placeholder: "请输入用户名" },
+                  model: {
+                    value: _vm.adminLoginForm.admin_name,
+                    callback: function($$v) {
+                      _vm.$set(_vm.adminLoginForm, "admin_name", $$v)
+                    },
+                    expression: "adminLoginForm.admin_name"
+                  }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "el-form-item",
+              { attrs: { label: "密码", prop: "password" } },
+              [
+                _c("el-input", {
+                  staticClass: "password-input",
+                  attrs: { placeholder: "请输入密码" },
+                  model: {
+                    value: _vm.adminLoginForm.password,
+                    callback: function($$v) {
+                      _vm.$set(_vm.adminLoginForm, "password", $$v)
+                    },
+                    expression: "adminLoginForm.password"
+                  }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "el-form-item",
+              [
+                _c(
+                  "el-button",
+                  {
+                    attrs: { type: "primary" },
+                    on: { click: _vm.onLoginSubmit }
                   },
-                  expression: "adminLoginForm.admin_username"
-                }
-              })
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "el-form-item",
-            { attrs: { label: "密码", prop: "admin_password" } },
-            [
-              _c("el-input", {
-                staticClass: "password-input",
-                attrs: { placeholder: "请输入密码" },
-                model: {
-                  value: _vm.adminLoginForm.admin_password,
-                  callback: function($$v) {
-                    _vm.$set(_vm.adminLoginForm, "admin_password", $$v)
-                  },
-                  expression: "adminLoginForm.admin_password"
-                }
-              })
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "el-form-item",
-            [
-              _c(
-                "el-button",
-                {
-                  attrs: { type: "primary" },
-                  on: { click: _vm.onLoginSubmit }
-                },
-                [_vm._v("立即登陆")]
-              ),
-              _vm._v(" "),
-              _c("el-button", [_vm._v("取消")])
-            ],
-            1
-          )
-        ],
-        1
-      )
-    ],
-    1
-  )
+                  [_vm._v("立即登陆")]
+                ),
+                _vm._v(" "),
+                _c("el-button", [_vm._v("取消")])
+              ],
+              1
+            )
+          ],
+          1
+        )
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

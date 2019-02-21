@@ -15,14 +15,10 @@ const router = new VueRouter({ // 定义VueRouter路由对象
     mode: 'hash', // 前端路由模式为/#/
     routes: [  // 定义前端路由
         {
-            path: '/admin',
-            component: Admin
-        },
-        {
-            path: '/helloadmin',
+            path: '/',
             component: HelloAdmin
         }
     ]
 })
 
-new Vue(Vue.util.extend({router}, Admin)).$mount('#admin') // 使用前面定义好的前端路由，以Admin.vue作为最外层的Vue组件，启动Vue编译，并把输出挂在到id为admin的DOM元素上
+new Vue(Vue.util.extend({router}, Admin)).$mount('#index') // 使用前面定义好的前端路由，以Admin.vue作为最外层的Vue组件，启动Vue编译，并把输出挂在到id为admin的DOM元素上

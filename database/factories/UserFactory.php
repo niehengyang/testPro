@@ -26,10 +26,10 @@ $factory->define(App\User::class, function (Faker $faker) {
 //填充管理员数据
 $factory->define(App\Model\Admin::class, function (Faker $faker) {
     static $password;
-
     return [
-        'admin_username' => $faker->firstName,
-        'admin_password' => $password ?: $password = bcrypt('secret'),
+        'admin_name' => $faker->firstName,
+        'password' => $password ?: $password = bcrypt('123456'),
+        'email' => $faker->email,
         'remember_token' => str_random(10),
     ];
 });
