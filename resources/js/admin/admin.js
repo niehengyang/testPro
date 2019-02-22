@@ -15,7 +15,7 @@ const router = new VueRouter({ // 定义VueRouter路由对象
     mode: 'hash', // 前端路由模式为/#/
     routes: [  // 定义前端路由
         {
-            path: '/index',
+            path: '/',
             component: HelloAdmin,
         }
     ]

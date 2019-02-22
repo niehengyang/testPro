@@ -111,7 +111,7 @@ class LoginController extends Controller
             $this->guard()->logout();
             $request->session()->forget($this->guard()->getName());
             $request->session()->regenerate();
-            return redirect('/admin/');
+            return redirect('/admin/login');
         }
 
 }

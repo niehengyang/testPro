@@ -1643,7 +1643,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({// name: "Admin"
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  // name: "Admin",
+  data: function data() {
+    return {};
+  },
+  created: function created() {},
+  methods: {
+    //退出登录
+    toLogout: function toLogout() {
+      var _this = this;
+
+      axios.post('/admin/logout').then(function (response) {
+        window.location.href = '/admin/';
+
+        _this.$message.success('注销成功！');
+      }).catch(function (error) {
+        _this.$message.success('注销失败！');
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -40842,7 +40862,20 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("首页\n    "), _c("router-view")], 1)
+  return _c(
+    "div",
+    [
+      _vm._v("首页\n    "),
+      _c(
+        "el-button",
+        { attrs: { type: "primary" }, on: { click: _vm.toLogout } },
+        [_vm._v("退出登录")]
+      ),
+      _vm._v(" "),
+      _c("router-view")
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -41048,7 +41081,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
   // 前端路由模式为/#/
   routes: [// 定义前端路由
   {
-    path: '/index',
+    path: '/',
     component: _components_Test_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
   }]
 });
