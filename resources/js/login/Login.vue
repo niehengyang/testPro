@@ -6,7 +6,7 @@
                     <el-input class="username-input" v-model="adminLoginForm.admin_name"  placeholder="请输入用户名"></el-input>
                 </el-form-item>
                 <el-form-item label="密码" prop="password">
-                    <el-input class="password-input" v-model="adminLoginForm.password" placeholder="请输入密码"></el-input>
+                    <el-input class="password-input" type="password" v-model="adminLoginForm.password" placeholder="请输入密码"></el-input>
                 </el-form-item>
                 <el-form-item>
                     <el-button type="primary" @click="onLoginSubmit">立即登陆</el-button>
@@ -31,6 +31,7 @@
             onLoginSubmit(){
                 axios.post('/admin/login',this.adminLoginForm)
                     .then((response)=> {
+                        window.location.href = '/admin/'
                         this.$message.success('登录成功！')
                     })
                     .catch((error)=> {

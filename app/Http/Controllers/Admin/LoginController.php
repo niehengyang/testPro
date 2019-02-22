@@ -37,7 +37,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/admin/';
     protected $username;
 
     /**
@@ -47,7 +47,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest.admin')->except('logout');
+        $this->middleware('guest.admin')->except('logout');//冒号后面的admin作为参数传给中间件的$guard形参
     }
 
     /*
@@ -100,16 +100,18 @@ class LoginController extends Controller
 //        }
 //    }
 
-    /**
-     * 退出登录
-     */
-//    public function logout(Request $request) {
-//        $user = $request['user'];
-//        // 记录退出登录的日志信息
-//
-//        Auth::logout();
-//        return redirect('/login');
-//    }
-
+      /**
+    * 重写退出登录
+    *
+    * @param  \Illuminate\Http\Request  $request
+    * @return \Illuminate\Http\Response
+    */
+        public function logout(Request $request)
+        {
+            $this->guard()->logout();
+            $request->session()->forget($this->guard()->getName());
+            $request->session()->regenerate();
+            return redirect('/admin/');
+        }
 
 }

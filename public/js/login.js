@@ -1671,6 +1671,8 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.post('/admin/login', this.adminLoginForm).then(function (response) {
+        window.location.href = '/admin/';
+
         _this.$message.success('登录成功！');
       }).catch(function (error) {
         _this.$message.success('登录失败！');
@@ -40943,7 +40945,7 @@ var render = function() {
               [
                 _c("el-input", {
                   staticClass: "password-input",
-                  attrs: { placeholder: "请输入密码" },
+                  attrs: { type: "password", placeholder: "请输入密码" },
                   model: {
                     value: _vm.adminLoginForm.password,
                     callback: function($$v) {
