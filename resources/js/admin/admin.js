@@ -10,6 +10,7 @@ Vue.use(ElementUI) // 使用element-ui
 import Admin from './Admin.vue' // 引入App最外层页面组件
 
 import HelloAdmin from './components/Test.vue' //引入hello组件
+import Home from './components/Home.vue' //引入home组件
 
 const router = new VueRouter({ // 定义VueRouter路由对象
     mode: 'hash', // 前端路由模式为/#/
@@ -17,7 +18,12 @@ const router = new VueRouter({ // 定义VueRouter路由对象
         {
             path: '/',
             component: HelloAdmin,
+        },
+        {
+            path: '/home',
+            component: Home
         }
+
     ]
 })
 

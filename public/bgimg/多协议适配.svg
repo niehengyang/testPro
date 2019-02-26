@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>多协议适配</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="64" height="64"></rect>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-3">
+            <stop stop-color="#106AFF" offset="0%"></stop>
+            <stop stop-color="#C0CDFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="多协议适配" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask"></g>
+            <g id="接出适配器类型" mask="url(#mask-2)" fill-rule="nonzero">
+                <g transform="translate(4.000000, 2.000000)">
+                    <rect id="Rectangle-path" fill="#000000" opacity="0" x="0" y="0" width="60" height="60"></rect>
+                    <path d="M37.5,34.125 L47.25,34.125 L47.25,38.625 L55.875,31.5 L47.25,24.375 L47.25,28.875 L37.5,28.875 L37.5,15 C37.5,12.75 36,11.25 33.75,11.25 L14.625,11.25 C13.875,9 11.625,7.5 9.375,7.5 C6.375,7.5 3.75,10.125 3.75,13.125 C3.75,16.125 6.375,18.75 9.375,18.75 C12,18.75 13.875,17.25 14.625,15 L33.75,15 L33.75,29.25 L18,29.25 C16.875,27.375 15.375,26.25 13.125,26.25 L3.75,26.25 L3.75,37.5 L13.125,37.5 C15.375,37.5 17.25,36 18.375,34.125 L33.75,34.125 L33.75,48.75 L15,48.75 L15,45 L3.75,45 L3.75,56.25 L15,56.25 L15,52.5 L33.75,52.5 C36,52.5 37.5,51 37.5,48.75 L37.5,34.125 Z" id="Shape" fill="url(#linearGradient-3)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

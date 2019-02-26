@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>可视化开发</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="64" height="64"></rect>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-3">
+            <stop stop-color="#106AFF" offset="0%"></stop>
+            <stop stop-color="#C0CDFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-4">
+            <stop stop-color="#B3C9FE" offset="0%"></stop>
+            <stop stop-color="#EDF3FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="可视化开发" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask"></g>
+            <g id="开发者中心" mask="url(#mask-2)">
+                <g transform="translate(8.000000, 11.000000)">
+                    <rect id="Rectangle-path" fill="#000000" fill-rule="nonzero" opacity="0" x="0" y="0" width="44" height="43"></rect>
+                    <path d="M4,0 L45,0 C47.209139,-4.05812251e-16 49,1.790861 49,4 L49,30.9375 C49,33.146639 47.209139,34.9375 45,34.9375 L4,34.9375 C1.790861,34.9375 2.705415e-16,33.146639 0,30.9375 L-4.4408921e-16,4 C-7.1463071e-16,1.790861 1.790861,4.05812251e-16 4,0 Z M43.5555556,25.5625 L43.5555556,9.375 C43.5555556,7.165861 41.7646946,5.375 39.5555556,5.375 L9.71289737,5.375 C7.52447418,5.375 5.74231087,7.13365243 5.71325007,9.32188266 L5.49827189,25.5093827 C5.468936,27.7183269 7.23585765,29.5328114 9.44480186,29.5621473 C9.46250666,29.5623824 9.48021283,29.5625 9.49791919,29.5625 L39.5555556,29.5625 C41.7646946,29.5625 43.5555556,27.771639 43.5555556,25.5625 Z" id="Shape" fill="url(#linearGradient-3)" fill-rule="nonzero"></path>
+                    <polygon id="Path" fill="url(#linearGradient-4)" fill-rule="evenodd" points="11 16.625 17 11 19 12.875 13 18.5 19 24.125 17 26 11 20.375 9 18.5"></polygon>
+                    <polygon id="Path" fill="url(#linearGradient-4)" fill-rule="evenodd" points="29 7.79994967 22.6375038 29 20 28.2000503 26.3652493 7"></polygon>
+                    <polygon id="Path" fill="url(#linearGradient-4)" fill-rule="evenodd" points="32.2 11 38.8 17 41 19 38.8 21 32.2 27 30 25 36.6 19 30 13"></polygon>
+                </g>
+            </g>
+            <path d="M8,51.5 L8,51.5 C8,50.1192881 9.11928813,49 10.5,49 L54.5,49 C55.8807119,49 57,50.1192881 57,51.5 L57,51.5 C57,52.8807119 55.8807119,54 54.5,54 L10.5,54 C9.11928813,54 8,52.8807119 8,51.5 Z" id="Path" fill="url(#linearGradient-4)" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>

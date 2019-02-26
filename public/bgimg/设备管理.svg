@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>设备管理</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="64" height="64"></rect>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-3">
+            <stop stop-color="#106AFF" offset="0%"></stop>
+            <stop stop-color="#C0CDFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-4">
+            <stop stop-color="#B3C9FE" offset="0%"></stop>
+            <stop stop-color="#EDF3FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="设备管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask"></g>
+            <g id="设备" mask="url(#mask-2)">
+                <g transform="translate(2.000000, 2.000000)">
+                    <rect id="Rectangle-path" fill="#000000" fill-rule="nonzero" opacity="0" x="0" y="0" width="60" height="60"></rect>
+                    <path d="M9.00256849,14.1267123 C9.00256849,11.4657534 11.0933219,9.375 13.5642123,9.375 L45.8758562,9.375 C48.3467466,9.375 50.4375,11.4657534 50.4375,14.1267123 L50.4375,32.7534247 L9.00256849,32.7534247 L9.00256849,14.1267123 Z M17.3655822,28.3818493 L21.1669521,21.9195205 L29.9101027,27.8116438 L34.6618151,20.3989726 L43.9751712,25.7208904 L46.0659247,21.9195205 L33.1412671,13.7465753 L28.7696918,21.3493151 L19.2662671,16.2174658 L13.5642123,26.2910959 L17.3655822,28.3818493 Z" id="Shape" fill="url(#linearGradient-3)" fill-rule="nonzero"></path>
+                    <path d="M45.8758562,51 L13.5642123,51 C11.0933219,51 9.00256849,48.9092466 9.00256849,46.2482877 L9.00256849,35.4143836 L50.4375,35.4143836 L50.4375,46.2482877 C50.4375,48.9092466 48.3467466,51 45.8758562,51 Z M34.8518836,40.7363014 L14.1344178,40.7363014 L14.1344178,45.8681507 L34.8518836,45.8681507 L34.8518836,40.7363014 Z M45.3056507,40.7363014 L40.1738014,40.7363014 L40.1738014,45.8681507 L45.3056507,45.8681507 L45.3056507,40.7363014 Z" id="Combined-Shape" fill="url(#linearGradient-4)" fill-rule="evenodd"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
