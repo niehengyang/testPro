@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('admin.index');
+});
+
+Route::get('/video',function (){
+    redirect('/video');
 });
 
 Auth::routes();

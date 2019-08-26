@@ -9,6 +9,7 @@
     <title>测试网站后台</title>
     <link rel="stylesheet" href="{{mix('css/admin.css')}}">
 </head>
+
 <body>
 <div id="adminindex"></div>
 <script src="{{mix('js/manifest.js')}}"></script>
