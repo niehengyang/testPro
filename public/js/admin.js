@@ -3517,8 +3517,153 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "SmartHome"
+  name: "SmartHome",
+  data: function data() {
+    return {
+      activeIndex: '1',
+      //退出登录框
+      logoutConfirmVisible: false,
+      // 权限列表
+      // permissionList: window.__permission_list__,
+      // currentUserName: window.__login_user__.admin_name,
+      // currentUserLever: window.__login_user__.admin_level,
+      //最新告警信息
+      newAlarmArray: {
+        alarm_count: 0,
+        topThireAlarm: []
+      }
+    };
+  },
+  created: function created() {},
+  methods: {
+    //选择菜单
+    handleSelect: function handleSelect(key, keyPath) {
+      console.log(key, keyPath);
+    },
+    logoutConfirm: function logoutConfirm() {
+      this.logoutConfirmVisible = true;
+    },
+    // 退出登录
+    logout: function logout() {
+      TokenFactory.clearToken();
+      window.location.href = '/admin/login';
+    },
+    //跳转到告警列表
+    toAlarmList: function toAlarmList() {
+      this.$router.push({
+        path: '/alarm/'
+      });
+    }
+  },
+  mounted: function mounted() {}
 });
 
 /***/ }),
@@ -9920,6 +10065,44 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/_css
 
 // module
 exports.push([module.i, ".home-page[data-v-8018cbec] {\n  width: 100%;\n  height: 100%;\n  overflow-x: hidden;\n}\n.home-page .home-bg[data-v-8018cbec] {\n  position: absolute;\n  width: 100%;\n  /*width: 130%*/\n  height: 560px;\n  /*left: -16%*/\n}\n.home-page .home-bg .carousel-bg[data-v-8018cbec] {\n  width: 100%;\n  height: 100%;\n}\n.home-page .home-bg .carousel-bg .el-carousel__container[data-v-8018cbec] {\n  width: 100%;\n  height: 100%;\n}\n.home-page .home-bg .carousel-bg .el-carousel__container .carousel-item[data-v-8018cbec] {\n  width: 130%;\n  height: 560px;\n  left: -16%;\n}\n.home-page .home-bg .carousel-bg .el-carousel__container .carousel-item .mid-counter[data-v-8018cbec] {\n  position: absolute;\n  margin-top: 90px;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  z-index: 99;\n}\n.home-page .home-bg .carousel-bg .el-carousel__container .carousel-item .mid-counter .left-box[data-v-8018cbec] {\n  width: 60%;\n  height: 400px;\n  display: flex;\n  align-items: center;\n}\n.home-page .home-bg .carousel-bg .el-carousel__container .carousel-item .mid-counter .left-box .word-box[data-v-8018cbec] {\n  position: absolute;\n  width: 100%;\n  height: 100px;\n  text-align: center;\n  line-height: 50px;\n  display: block;\n}\n.home-page .home-bg .carousel-bg .el-carousel__container .carousel-item .mid-counter .left-box .word-box .app-name[data-v-8018cbec] {\n  font-size: 40px;\n  color: #FFFFFF;\n  line-height: 48px;\n  display: block;\n}\n.home-page .home-bg .carousel-bg .el-carousel__container .carousel-item .mid-counter .left-box .word-box .app-desc[data-v-8018cbec] {\n  font-size: 20px;\n  color: #FFFFFF;\n  display: block;\n}\n.home-page .home-bg .carousel-bg .el-carousel__container .carousel-item .homebg-img[data-v-8018cbec] {\n  width: 100%;\n  height: 100%;\n}\n.home-page .top-nav[data-v-8018cbec] {\n  position: absolute;\n  top: 0;\n  width: 100%;\n  height: 60px;\n  padding: 0 40px 0 40px;\n  display: flex;\n  flex-direction: row;\n  z-index: 99;\n}\n.home-page .top-nav .left-counter[data-v-8018cbec] {\n  width: 50%;\n  height: 60px;\n  display: flex;\n  align-items: center;\n  align-content: center;\n}\n.home-page .top-nav .left-counter .left-item[data-v-8018cbec] {\n  text-align: left;\n  display: flex;\n  align-items: center;\n}\n.home-page .top-nav .left-counter .left-item .logo-img[data-v-8018cbec] {\n  width: 32px;\n  height: 32px;\n  margin-right: 20px;\n}\n.home-page .top-nav .left-counter .left-item .logo-word[data-v-8018cbec] {\n  font-size: 20px;\n  color: #FFFFFF;\n  text-align: left;\n}\n.home-page .top-nav .left-counter .vertical-bar[data-v-8018cbec] {\n  width: 3px;\n  height: 14px;\n  border-left: 1px solid #FFFFFF;\n  margin: 0 16px 0 16px;\n}\n.home-page .top-nav .left-counter .right-item[data-v-8018cbec] {\n  display: flex;\n  align-items: center;\n}\n.home-page .top-nav .left-counter .right-item .cm-img[data-v-8018cbec] {\n  width: 67px;\n  height: 21px;\n}\n.home-page .top-nav .right-counter[data-v-8018cbec] {\n  width: 50%;\n  height: 60px;\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n}\n.home-page .top-nav .right-counter .midi-item[data-v-8018cbec] {\n  width: 84px;\n  height: 60px;\n  display: flex;\n  align-items: center;\n  align-content: center;\n}\n.home-page .top-nav .right-counter .midi-item .home-btn[data-v-8018cbec] {\n  width: 84px;\n  height: 20px;\n  line-height: 1px;\n  font-size: 14px;\n  color: #FFFFFF;\n  text-align: right;\n}\n.home-page .business-monitoring-box[data-v-8018cbec] {\n  width: 100%;\n  padding-top: 620px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.home-page .business-monitoring-box .business-monitoring-title[data-v-8018cbec] {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.home-page .business-monitoring-box .business-monitoring-title .monitoring-title[data-v-8018cbec] {\n  width: 100%;\n  font-size: 24px;\n  color: #373D41;\n  text-align: center;\n  letter-spacing: 1px;\n}\n.home-page .business-monitoring-box .business-monitoring-title .stripes[data-v-8018cbec] {\n  margin-top: 10px;\n  width: 40px;\n  height: 4px;\n  background: #106AFF;\n  border-radius: 100px;\n}\n.home-page .business-monitoring-box .business-monitoring-counter[data-v-8018cbec] {\n  width: 80%;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n.home-page .business-monitoring-box .business-monitoring-counter .business-item[data-v-8018cbec] {\n  width: 260px;\n  height: 160px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  align-content: flex-start;\n  margin-top: 80px;\n}\n.home-page .business-monitoring-box .business-monitoring-counter .business-item .business-img[data-v-8018cbec] {\n  width: 80px;\n  height: 80px;\n  cursor: pointer;\n}\n.home-page .business-monitoring-box .business-monitoring-counter .business-item .business-name[data-v-8018cbec] {\n  width: 100%;\n  text-align: center;\n  margin-top: 30px;\n  font-size: 20px;\n  color: #373D41;\n  cursor: pointer;\n}\n.home-page .frist-advertising[data-v-8018cbec] {\n  width: 100%;\n  height: 400px;\n  margin-top: 80px;\n  display: flex;\n  flex-flow: column;\n  align-items: center;\n  align-content: center;\n}\n.home-page .frist-advertising .first-advertising-title[data-v-8018cbec] {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 40px;\n  color: #F2F2F2;\n  letter-spacing: 2px;\n}\n.home-page .basic-ability-box[data-v-8018cbec] {\n  width: 100%;\n  margin-top: 80px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.home-page .basic-ability-box .basic-ability-title[data-v-8018cbec] {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.home-page .basic-ability-box .basic-ability-title .ability-title[data-v-8018cbec] {\n  width: 100%;\n  font-size: 24px;\n  color: #373D41;\n  text-align: center;\n  letter-spacing: 1px;\n}\n.home-page .basic-ability-box .basic-ability-title .stripes[data-v-8018cbec] {\n  margin-top: 10px;\n  width: 40px;\n  height: 4px;\n  background: #106AFF;\n  border-radius: 100px;\n}\n.home-page .basic-ability-box .basic-ability-counter[data-v-8018cbec] {\n  width: 80%;\n  display: flex;\n  flex-wrap: wrap;\n  margin-top: 20px;\n  align-items: center;\n}\n.home-page .basic-ability-box .basic-ability-counter .ability-item[data-v-8018cbec] {\n  width: 300px;\n  height: 300px;\n  display: flex;\n  padding: 20px;\n  flex-direction: column;\n  align-items: center;\n  align-content: center;\n  margin: 0 auto;\n}\n.home-page .basic-ability-box .basic-ability-counter .ability-item .ability-img[data-v-8018cbec] {\n  width: 64px;\n  height: 64px;\n  cursor: pointer;\n}\n.home-page .basic-ability-box .basic-ability-counter .ability-item .ability-name[data-v-8018cbec] {\n  margin-top: 30px;\n  font-size: 20px;\n  color: #373D41;\n  text-align: center;\n  cursor: pointer;\n}\n.home-page .basic-ability-box .basic-ability-counter .ability-item .ability-desc[data-v-8018cbec] {\n  margin-top: 20px;\n  font-size: 14px;\n  color: #999999;\n  text-align: justify;\n  line-height: 22px;\n}\n.home-page .second-advertising[data-v-8018cbec] {\n  width: 100%;\n  height: 400px;\n  margin-top: 80px;\n  display: flex;\n  flex-flow: column;\n  align-items: center;\n  align-content: center;\n}\n.home-page .second-advertising .second-advertising-title[data-v-8018cbec] {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  font-size: 40px;\n  color: #F2F2F2;\n  letter-spacing: 2px;\n}\n.home-page .second-advertising .join-btn[data-v-8018cbec] {\n  width: 200px;\n  height: 60px;\n  border: 1px solid #FFFFFF;\n  border-radius: 100px;\n  font-size: 20px;\n  color: #FFFFFF;\n  text-align: center;\n  margin-top: 36px;\n  background: transparent;\n}\n.home-page .footer-box[data-v-8018cbec] {\n  width: 100%;\n  height: 166px;\n  background: #373D41;\n}\n.home-page .footer-box .top-box[data-v-8018cbec] {\n  width: 100%;\n  height: 126px;\n  display: flex;\n  flex-direction: row;\n}\n.home-page .footer-box .top-box .text-box[data-v-8018cbec] {\n  width: 50%;\n  height: 100%;\n  padding: 30px 0 0 120px;\n}\n.home-page .footer-box .top-box .text-box .text-box-item[data-v-8018cbec] {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n}\n.home-page .footer-box .top-box .text-box .text-box-item .bottom-text[data-v-8018cbec] {\n  width: 56px;\n  height: 20px;\n  font-size: 14px;\n  color: #F2F2F2;\n  text-align: center;\n  cursor: pointer;\n}\n.home-page .footer-box .top-box .text-box .text-box-item .small-vertical-bar[data-v-8018cbec] {\n  width: 0;\n  height: 10px;\n  border: 1px solid #FFFFFF;\n  margin: 0 30px 0 30px;\n}\n.home-page .footer-box .top-box .trademark-box[data-v-8018cbec] {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-around;\n  padding: 0 140px 0 140px;\n}\n.home-page .footer-box .top-box .trademark-box .left-item[data-v-8018cbec] {\n  width: 50%;\n  text-align: right;\n  padding-right: 50px;\n  line-height: 40px;\n}\n.home-page .footer-box .top-box .trademark-box .left-item .contact-way[data-v-8018cbec] {\n  font-size: 14px;\n  color: #FFFFFF;\n  text-align: justify;\n}\n.home-page .footer-box .top-box .trademark-box .right-item[data-v-8018cbec] {\n  width: 50%;\n  text-align: left;\n  padding-left: 50px;\n}\n.home-page .footer-box .top-box .trademark-box .right-item .qrcode-img[data-v-8018cbec] {\n  width: 88px;\n  height: 88px;\n}\n.home-page .footer-box .horizontal-line[data-v-8018cbec] {\n  width: 100%;\n  opacity: 0.2;\n  border: 1px solid #FFFFFF;\n}\n.home-page .footer-box .bottom-box[data-v-8018cbec] {\n  width: 100%;\n  padding-left: 120px;\n}\n.home-page .footer-box .bottom-box .copyright[data-v-8018cbec] {\n  opacity: 0.5;\n  font-size: 12px;\n  color: #FFFFFF;\n  text-align: center;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/_css-loader@1.0.1@css-loader/index.js!./node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/stylePostLoader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js?!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js?!./node_modules/_vue-loader@15.7.0@vue-loader/lib/index.js?!./resources/js/admin/home/SmartHome.vue?vue&type=style&index=0&lang=sass&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/_css-loader@1.0.1@css-loader!./node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/stylePostLoader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src??ref--10-2!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js??ref--10-3!./node_modules/_vue-loader@15.7.0@vue-loader/lib??vue-loader-options!./resources/js/admin/home/SmartHome.vue?vue&type=style&index=0&lang=sass& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/_css-loader@1.0.1@css-loader/lib/css-base.js */ "./node_modules/_css-loader@1.0.1@css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".el-menu--horizontal > .el-submenu .el-submenu__title {\n  height: 88px;\n  width: 150px;\n  font-size: 20px;\n  text-align: center;\n  line-height: 88px;\n  color: white;\n  border-bottom: 2px solid transparent;\n  color: #909399;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/_css-loader@1.0.1@css-loader/index.js!./node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/stylePostLoader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js?!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js?!./node_modules/_vue-loader@15.7.0@vue-loader/lib/index.js?!./resources/js/admin/home/SmartHome.vue?vue&type=style&index=1&id=66f78d36&scoped=true&lang=sass&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/_css-loader@1.0.1@css-loader!./node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/stylePostLoader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src??ref--10-2!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js??ref--10-3!./node_modules/_vue-loader@15.7.0@vue-loader/lib??vue-loader-options!./resources/js/admin/home/SmartHome.vue?vue&type=style&index=1&id=66f78d36&scoped=true&lang=sass& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/_css-loader@1.0.1@css-loader/lib/css-base.js */ "./node_modules/_css-loader@1.0.1@css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".home-page .hearder-box[data-v-66f78d36] {\n  height: 88px;\n  background: #070f21;\n  text-align: center;\n  padding: 0 60px 0 60px;\n}\n.home-page .hearder-box .sysimg-item[data-v-66f78d36] {\n  width: 220px;\n  height: 88px;\n  float: left;\n  text-align: center;\n  margin-right: 50px;\n}\n.home-page .hearder-box .sysimg-item .sys-logo-item[data-v-66f78d36] {\n  width: 51px;\n  height: 88px;\n  margin-right: 10px;\n  text-align: center;\n  line-height: 120px;\n  float: left;\n}\n.home-page .hearder-box .sysimg-item .sys-logo-item .sys-logo[data-v-66f78d36] {\n  width: 51px;\n}\n.home-page .hearder-box .sysimg-item .sys-title-item[data-v-66f78d36] {\n  height: 88px;\n  font-size: 22px;\n  line-height: 88px;\n  color: white;\n  letter-spacing: 2px;\n}\n.home-page .hearder-box .menu-box[data-v-66f78d36] {\n  width: 750px;\n  height: 88px;\n  float: left;\n}\n.home-page .hearder-box .menu-box .el-menu-demo[data-v-66f78d36] {\n  width: 750px;\n  height: 88px;\n}\n.home-page .hearder-box .menu-box .el-menu-demo .el-menu-item[data-v-66f78d36] {\n  width: 150px;\n  height: 88px;\n  font-size: 20px;\n  text-align: center;\n  line-height: 88px;\n  color: white;\n}\n.home-page .hearder-box .menu-box .el-menu-demo .el-menu-item.is-active[data-v-66f78d36], .home-page .hearder-box .menu-box .el-menu-demo .el-submenu.is-active[data-v-66f78d36] {\n  font-weight: bold;\n}\n.home-page .hearder-box .right-take-box[data-v-66f78d36] {\n  width: 280px;\n  height: 88px;\n  float: right;\n}\n.home-page .hearder-box .right-take-box .use-wizard[data-v-66f78d36] {\n  width: 79px;\n  height: 88px;\n  line-height: 96px;\n  float: left;\n  font-size: 18px;\n  font-weight: 300;\n  color: white;\n  margin-right: 20px;\n  cursor: pointer;\n}\n.home-page .hearder-box .right-take-box .bell-logo[data-v-66f78d36] {\n  width: 30px;\n  height: 88px;\n  float: left;\n  line-height: 96px;\n  margin-right: 20px;\n  cursor: pointer;\n}\n.home-page .hearder-box .right-take-box .userInfoWrapper[data-v-66f78d36] {\n  width: 100px;\n  height: 88px;\n  float: left;\n}\n.home-page .hearder-box .right-take-box .userInfoWrapper .user-logo[data-v-66f78d36] {\n  width: 24px;\n  height: 24px;\n}\n.home-page .hearder-box .right-take-box .userInfoWrapper .user-name[data-v-66f78d36] {\n  font-size: 18px;\n  font-weight: 300;\n  color: white;\n}", ""]);
 
 // exports
 
@@ -103923,6 +104106,66 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/_style-loader@0.23.1@style-loader/index.js!./node_modules/_css-loader@1.0.1@css-loader/index.js!./node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/stylePostLoader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js?!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js?!./node_modules/_vue-loader@15.7.0@vue-loader/lib/index.js?!./resources/js/admin/home/SmartHome.vue?vue&type=style&index=0&lang=sass&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/_style-loader@0.23.1@style-loader!./node_modules/_css-loader@1.0.1@css-loader!./node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/stylePostLoader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src??ref--10-2!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js??ref--10-3!./node_modules/_vue-loader@15.7.0@vue-loader/lib??vue-loader-options!./resources/js/admin/home/SmartHome.vue?vue&type=style&index=0&lang=sass& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/_css-loader@1.0.1@css-loader!../../../../node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/_postcss-loader@3.0.0@postcss-loader/src??ref--10-2!../../../../node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js??ref--10-3!../../../../node_modules/_vue-loader@15.7.0@vue-loader/lib??vue-loader-options!./SmartHome.vue?vue&type=style&index=0&lang=sass& */ "./node_modules/_css-loader@1.0.1@css-loader/index.js!./node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/stylePostLoader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js?!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js?!./node_modules/_vue-loader@15.7.0@vue-loader/lib/index.js?!./resources/js/admin/home/SmartHome.vue?vue&type=style&index=0&lang=sass&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/_style-loader@0.23.1@style-loader/lib/addStyles.js */ "./node_modules/_style-loader@0.23.1@style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/_style-loader@0.23.1@style-loader/index.js!./node_modules/_css-loader@1.0.1@css-loader/index.js!./node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/stylePostLoader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js?!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js?!./node_modules/_vue-loader@15.7.0@vue-loader/lib/index.js?!./resources/js/admin/home/SmartHome.vue?vue&type=style&index=1&id=66f78d36&scoped=true&lang=sass&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/_style-loader@0.23.1@style-loader!./node_modules/_css-loader@1.0.1@css-loader!./node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/stylePostLoader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src??ref--10-2!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js??ref--10-3!./node_modules/_vue-loader@15.7.0@vue-loader/lib??vue-loader-options!./resources/js/admin/home/SmartHome.vue?vue&type=style&index=1&id=66f78d36&scoped=true&lang=sass& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/_css-loader@1.0.1@css-loader!../../../../node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/_postcss-loader@3.0.0@postcss-loader/src??ref--10-2!../../../../node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js??ref--10-3!../../../../node_modules/_vue-loader@15.7.0@vue-loader/lib??vue-loader-options!./SmartHome.vue?vue&type=style&index=1&id=66f78d36&scoped=true&lang=sass& */ "./node_modules/_css-loader@1.0.1@css-loader/index.js!./node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/stylePostLoader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js?!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js?!./node_modules/_vue-loader@15.7.0@vue-loader/lib/index.js?!./resources/js/admin/home/SmartHome.vue?vue&type=style&index=1&id=66f78d36&scoped=true&lang=sass&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/_style-loader@0.23.1@style-loader/lib/addStyles.js */ "./node_modules/_style-loader@0.23.1@style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/_style-loader@0.23.1@style-loader/index.js!./node_modules/_css-loader@1.0.1@css-loader/index.js?!./node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/stylePostLoader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js?!./node_modules/_vue-loader@15.7.0@vue-loader/lib/index.js?!./resources/js/components/gotop.vue?vue&type=style&index=0&id=6dc2f49c&scoped=true&lang=css&":
 /*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/_style-loader@0.23.1@style-loader!./node_modules/_css-loader@1.0.1@css-loader??ref--8-1!./node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/stylePostLoader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src??ref--8-2!./node_modules/_vue-loader@15.7.0@vue-loader/lib??vue-loader-options!./resources/js/components/gotop.vue?vue&type=style&index=0&id=6dc2f49c&scoped=true&lang=css& ***!
@@ -105049,7 +105292,408 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("hello")])
+  return _c(
+    "div",
+    { staticClass: "home-page" },
+    [
+      _c(
+        "div",
+        { staticClass: "hearder-box" },
+        [
+          _c("el-row", { staticClass: "sysimg-item" }, [
+            _c("div", { staticClass: "sys-logo-item" }, [
+              _c("img", {
+                staticClass: "sys-logo",
+                attrs: { src: "smartHomeImages/logo.png" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "sys-title-item" }, [
+              _vm._v("工业监测平台")
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "menu-box" },
+            [
+              _c(
+                "el-menu",
+                {
+                  staticClass: "el-menu-demo",
+                  attrs: {
+                    "default-active": _vm.activeIndex,
+                    mode: "horizontal",
+                    "background-color": "#070F21",
+                    "text-color": "#fff",
+                    "active-text-color": "#0079FE"
+                  },
+                  on: { select: _vm.handleSelect }
+                },
+                [
+                  _c("el-menu-item", { attrs: { index: "1" } }, [
+                    _vm._v("数据中心")
+                  ]),
+                  _vm._v(" "),
+                  _c("el-menu-item", { attrs: { index: "2" } }, [
+                    _vm._v("应用模板")
+                  ]),
+                  _vm._v(" "),
+                  _c("el-menu-item", { attrs: { index: "3" } }, [
+                    _vm._v("设备管理")
+                  ]),
+                  _vm._v(" "),
+                  _c("el-menu-item", { attrs: { index: "4" } }, [
+                    _vm._v("AI模型管理")
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "el-submenu",
+                    { attrs: { index: "5" } },
+                    [
+                      _c(
+                        "template",
+                        { staticClass: "sys-meger", slot: "title" },
+                        [_vm._v("系统管理")]
+                      ),
+                      _vm._v(" "),
+                      _c("el-menu-item", { attrs: { index: "5-1" } }, [
+                        _vm._v("用户管理")
+                      ]),
+                      _vm._v(" "),
+                      _c("el-menu-item", { attrs: { index: "5-2" } }, [
+                        _vm._v("角色管理")
+                      ]),
+                      _vm._v(" "),
+                      _c("el-menu-item", { attrs: { index: "5-3" } }, [
+                        _vm._v("日志管理")
+                      ]),
+                      _vm._v(" "),
+                      _c("el-menu-item", { attrs: { index: "5-4" } }, [
+                        _vm._v("能力开放管理")
+                      ])
+                    ],
+                    2
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "right-take-box" }, [
+            _c("div", { staticClass: "use-wizard", attrs: { title: "向导" } }, [
+              _vm._v("使用向导")
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "bell-logo" },
+              [
+                _c(
+                  "el-badge",
+                  {
+                    staticClass: "item",
+                    staticStyle: { "line-height": "30px" },
+                    attrs: {
+                      value:
+                        _vm.newAlarmArray.alarm_count == 0
+                          ? false
+                          : _vm.newAlarmArray.alarm_count,
+                      title:
+                        "您有" + _vm.newAlarmArray.alarm_count + "条告警未处理"
+                    }
+                  },
+                  [
+                    _c(
+                      "el-popover",
+                      {
+                        directives: [
+                          {
+                            name: "loading",
+                            rawName: "v-loading",
+                            value: _vm.toLoadAlarm,
+                            expression: "toLoadAlarm"
+                          }
+                        ],
+                        attrs: {
+                          placement: "bottom",
+                          width: "360",
+                          trigger: "click"
+                        }
+                      },
+                      [
+                        _c("div", { staticClass: "nofityWrapper" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass: "nofityList",
+                              staticStyle: { padding: "16px 19px 4px 20px" }
+                            },
+                            [
+                              _vm._l(_vm.newAlarmArray.topThireAlarm, function(
+                                alarm,
+                                index
+                              ) {
+                                return _c(
+                                  "div",
+                                  {
+                                    key: index,
+                                    staticClass: "listItem",
+                                    staticStyle: {
+                                      "border-bottom": "1px solid #EBEEF5",
+                                      height: "62px"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "alarmTitle",
+                                        staticStyle: {
+                                          "font-size": "14px",
+                                          color: "rgba(48, 49, 51, 0.85)",
+                                          "letter-spacing": "0",
+                                          "line-height": "22px"
+                                        }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                        告警名称：" +
+                                            _vm._s(
+                                              alarm ? alarm.alarm_title : "--"
+                                            ) +
+                                            "\n                                    "
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "taskName",
+                                        staticStyle: {
+                                          "font-size": "14px",
+                                          color: "#106AFF",
+                                          "letter-spacing": "0",
+                                          "line-height": "22px",
+                                          cursor: "pointer"
+                                        }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                        告警设备：" +
+                                            _vm._s(
+                                              alarm
+                                                ? alarm.alarm_conditions[0]
+                                                    .device_info.device_name
+                                                : "--"
+                                            ) +
+                                            "\n                                    "
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "dateTime",
+                                        staticStyle: {
+                                          float: "right",
+                                          "font-size": "12px",
+                                          color: "#909399",
+                                          "letter-spacing": "0",
+                                          "line-height": "18px"
+                                        }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                        告警时间：" +
+                                            _vm._s(
+                                              alarm ? alarm.created_at : "--"
+                                            ) +
+                                            "\n                                    "
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                )
+                              }),
+                              _vm._v(" "),
+                              _vm.newAlarmArray.topThireAlarm.length == 0
+                                ? _c(
+                                    "div",
+                                    {
+                                      staticStyle: {
+                                        "font-size": "16px",
+                                        color: "#909399",
+                                        "text-align": "center"
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                    暂无告警\n                                "
+                                      )
+                                    ]
+                                  )
+                                : _vm._e()
+                            ],
+                            2
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "notifyCheckAll",
+                              staticStyle: {
+                                "font-size": "12px",
+                                color: "#909399",
+                                "letter-spacing": "0",
+                                "line-height": "18px",
+                                "text-align": "center",
+                                cursor: "pointer"
+                              },
+                              on: { click: _vm.toAlarmList }
+                            },
+                            [
+                              _vm._v(
+                                "\n                                查看全部消息\n                            "
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("img", {
+                          attrs: {
+                            slot: "reference",
+                            width: "30",
+                            src: "smartHomeImages/bell.png",
+                            alt: "小铃铛图片"
+                          },
+                          on: { click: _vm.getNewAlarms },
+                          slot: "reference"
+                        })
+                      ]
+                    )
+                  ],
+                  1
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "userInfoWrapper" },
+              [
+                _c(
+                  "el-menu",
+                  {
+                    staticClass: "userInfoMenu",
+                    attrs: {
+                      mode: "horizontal",
+                      "background-color": "#070F21",
+                      "text-color": "#fff",
+                      router: true
+                    }
+                  },
+                  [
+                    _c(
+                      "el-submenu",
+                      { attrs: { index: "" } },
+                      [
+                        _c("template", { slot: "title" }, [
+                          _c("img", {
+                            staticClass: "user-logo",
+                            attrs: { src: "smartHomeImages/user.png" }
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "user-name" }, [
+                            _vm._v("导航一")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "el-menu-item",
+                          { attrs: { index: "/user/info/" } },
+                          [_vm._v("用户信息")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "el-menu-item",
+                          {
+                            attrs: { index: "#" },
+                            on: { click: _vm.logoutConfirm }
+                          },
+                          [_vm._v("退出登录")]
+                        )
+                      ],
+                      2
+                    )
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "el-dialog",
+        {
+          attrs: {
+            title: "提示",
+            visible: _vm.logoutConfirmVisible,
+            "show-close": false
+          },
+          on: {
+            "update:visible": function($event) {
+              _vm.logoutConfirmVisible = $event
+            }
+          }
+        },
+        [
+          _c("div", { staticStyle: { "text-align": "center" } }, [
+            _c("span", [_vm._v("你确定要退出系统吗?")])
+          ]),
+          _vm._v(" "),
+          _c(
+            "span",
+            {
+              staticClass: "dialog-footer",
+              attrs: { slot: "footer" },
+              slot: "footer"
+            },
+            [
+              _c(
+                "el-button",
+                {
+                  on: {
+                    click: function($event) {
+                      _vm.logoutConfirmVisible = false
+                    }
+                  }
+                },
+                [_vm._v("取消")]
+              ),
+              _vm._v(" "),
+              _c(
+                "el-button",
+                { attrs: { type: "primary" }, on: { click: _vm.logout } },
+                [_vm._v("确 定")]
+              )
+            ],
+            1
+          )
+        ]
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -120209,7 +120853,11 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SmartHome_vue_vue_type_template_id_66f78d36_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SmartHome.vue?vue&type=template&id=66f78d36&scoped=true& */ "./resources/js/admin/home/SmartHome.vue?vue&type=template&id=66f78d36&scoped=true&");
 /* harmony import */ var _SmartHome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SmartHome.vue?vue&type=script&lang=js& */ "./resources/js/admin/home/SmartHome.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_15_7_0_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/_vue-loader@15.7.0@vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/_vue-loader@15.7.0@vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _SmartHome_vue_vue_type_style_index_0_lang_sass___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SmartHome.vue?vue&type=style&index=0&lang=sass& */ "./resources/js/admin/home/SmartHome.vue?vue&type=style&index=0&lang=sass&");
+/* harmony import */ var _SmartHome_vue_vue_type_style_index_1_id_66f78d36_scoped_true_lang_sass___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SmartHome.vue?vue&type=style&index=1&id=66f78d36&scoped=true&lang=sass& */ "./resources/js/admin/home/SmartHome.vue?vue&type=style&index=1&id=66f78d36&scoped=true&lang=sass&");
+/* harmony import */ var _node_modules_vue_loader_15_7_0_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../node_modules/_vue-loader@15.7.0@vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/_vue-loader@15.7.0@vue-loader/lib/runtime/componentNormalizer.js");
+
+
 
 
 
@@ -120217,7 +120865,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_15_7_0_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_15_7_0_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__["default"])(
   _SmartHome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _SmartHome_vue_vue_type_template_id_66f78d36_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
   _SmartHome_vue_vue_type_template_id_66f78d36_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -120246,6 +120894,38 @@ component.options.__file = "resources/js/admin/home/SmartHome.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_8_0_6_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_SmartHome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/_babel-loader@8.0.6@babel-loader/lib??ref--4-0!../../../../node_modules/_vue-loader@15.7.0@vue-loader/lib??vue-loader-options!./SmartHome.vue?vue&type=script&lang=js& */ "./node_modules/_babel-loader@8.0.6@babel-loader/lib/index.js?!./node_modules/_vue-loader@15.7.0@vue-loader/lib/index.js?!./resources/js/admin/home/SmartHome.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_8_0_6_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_SmartHome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/admin/home/SmartHome.vue?vue&type=style&index=0&lang=sass&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/admin/home/SmartHome.vue?vue&type=style&index=0&lang=sass& ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_0_23_1_style_loader_index_js_node_modules_css_loader_1_0_1_css_loader_index_js_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_10_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_10_3_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_SmartHome_vue_vue_type_style_index_0_lang_sass___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/_style-loader@0.23.1@style-loader!../../../../node_modules/_css-loader@1.0.1@css-loader!../../../../node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/_postcss-loader@3.0.0@postcss-loader/src??ref--10-2!../../../../node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js??ref--10-3!../../../../node_modules/_vue-loader@15.7.0@vue-loader/lib??vue-loader-options!./SmartHome.vue?vue&type=style&index=0&lang=sass& */ "./node_modules/_style-loader@0.23.1@style-loader/index.js!./node_modules/_css-loader@1.0.1@css-loader/index.js!./node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/stylePostLoader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js?!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js?!./node_modules/_vue-loader@15.7.0@vue-loader/lib/index.js?!./resources/js/admin/home/SmartHome.vue?vue&type=style&index=0&lang=sass&");
+/* harmony import */ var _node_modules_style_loader_0_23_1_style_loader_index_js_node_modules_css_loader_1_0_1_css_loader_index_js_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_10_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_10_3_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_SmartHome_vue_vue_type_style_index_0_lang_sass___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_0_23_1_style_loader_index_js_node_modules_css_loader_1_0_1_css_loader_index_js_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_10_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_10_3_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_SmartHome_vue_vue_type_style_index_0_lang_sass___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_0_23_1_style_loader_index_js_node_modules_css_loader_1_0_1_css_loader_index_js_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_10_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_10_3_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_SmartHome_vue_vue_type_style_index_0_lang_sass___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_0_23_1_style_loader_index_js_node_modules_css_loader_1_0_1_css_loader_index_js_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_10_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_10_3_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_SmartHome_vue_vue_type_style_index_0_lang_sass___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_0_23_1_style_loader_index_js_node_modules_css_loader_1_0_1_css_loader_index_js_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_10_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_10_3_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_SmartHome_vue_vue_type_style_index_0_lang_sass___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/admin/home/SmartHome.vue?vue&type=style&index=1&id=66f78d36&scoped=true&lang=sass&":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/admin/home/SmartHome.vue?vue&type=style&index=1&id=66f78d36&scoped=true&lang=sass& ***!
+  \*********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_0_23_1_style_loader_index_js_node_modules_css_loader_1_0_1_css_loader_index_js_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_10_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_10_3_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_SmartHome_vue_vue_type_style_index_1_id_66f78d36_scoped_true_lang_sass___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/_style-loader@0.23.1@style-loader!../../../../node_modules/_css-loader@1.0.1@css-loader!../../../../node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/_postcss-loader@3.0.0@postcss-loader/src??ref--10-2!../../../../node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js??ref--10-3!../../../../node_modules/_vue-loader@15.7.0@vue-loader/lib??vue-loader-options!./SmartHome.vue?vue&type=style&index=1&id=66f78d36&scoped=true&lang=sass& */ "./node_modules/_style-loader@0.23.1@style-loader/index.js!./node_modules/_css-loader@1.0.1@css-loader/index.js!./node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/stylePostLoader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js?!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js?!./node_modules/_vue-loader@15.7.0@vue-loader/lib/index.js?!./resources/js/admin/home/SmartHome.vue?vue&type=style&index=1&id=66f78d36&scoped=true&lang=sass&");
+/* harmony import */ var _node_modules_style_loader_0_23_1_style_loader_index_js_node_modules_css_loader_1_0_1_css_loader_index_js_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_10_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_10_3_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_SmartHome_vue_vue_type_style_index_1_id_66f78d36_scoped_true_lang_sass___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_0_23_1_style_loader_index_js_node_modules_css_loader_1_0_1_css_loader_index_js_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_10_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_10_3_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_SmartHome_vue_vue_type_style_index_1_id_66f78d36_scoped_true_lang_sass___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_0_23_1_style_loader_index_js_node_modules_css_loader_1_0_1_css_loader_index_js_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_10_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_10_3_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_SmartHome_vue_vue_type_style_index_1_id_66f78d36_scoped_true_lang_sass___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_0_23_1_style_loader_index_js_node_modules_css_loader_1_0_1_css_loader_index_js_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_10_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_10_3_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_SmartHome_vue_vue_type_style_index_1_id_66f78d36_scoped_true_lang_sass___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_0_23_1_style_loader_index_js_node_modules_css_loader_1_0_1_css_loader_index_js_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_10_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_10_3_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_SmartHome_vue_vue_type_style_index_1_id_66f78d36_scoped_true_lang_sass___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
