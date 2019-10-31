@@ -23,3 +23,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+
+Route::post('/email', 'email\TestController@sendEmail');//测试邮件

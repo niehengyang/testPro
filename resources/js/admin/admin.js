@@ -13,13 +13,14 @@ import HelloAdmin from './components/Test.vue' //引入hello组件
 import Home from './components/Home.vue' //引入home组件
 import Video from "./video/testVideoPlay.vue"//测试视频播放器
 import SmartHome from "./home/SmartHome.vue"//智能监测项目首页
+import TestEmail from "./email/TestEmail.vue"//测试邮件
 
 const router = new VueRouter({ // 定义VueRouter路由对象
     mode: 'hash', // 前端路由模式为/#/
     routes: [  // 定义前端路由
         {
             path: '/',
-            component: SmartHome,
+            component: TestEmail,
         },
         {
             path: '/home',
