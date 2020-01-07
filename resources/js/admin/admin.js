@@ -1,33 +1,30 @@
-require('../bootstrap');
-window.Vue = require('vue') //引入Vue
+
+window.Vue = require('vue'); //引入Vue
+
+/* VueJs 通用基础组件 */
+require("../bootstrap");
+
+/* 第三方通用组件 */
+require("./bootstrap/3rd");
+
+/* 项目自定义组件 */
+require("./bootstrap/project");
+
+/* 看门狗 */
+require("./bootstrap/guard");
+
 
 import VueRouter from 'vue-router' //引入vue-router
-Vue.use(VueRouter) //使用vue-router
-import ElementUI from 'element-ui' //引入element-ui
-import 'element-ui/lib/theme-chalk/index.css' //引入element-ui样式文件
-Vue.use(ElementUI) // 使用element-ui
+Vue.use(VueRouter); //使用vue-router
+
+/* api统一管理 */
+import apis from "../apis/index";
+Vue.prototype.$api = apis;
+
 
 import Admin from './Admin.vue' // 引入App最外层页面组件
 
-import HelloAdmin from './components/Test.vue' //引入hello组件
-import Home from './components/Home.vue' //引入home组件
-import Video from "./video/testVideoPlay.vue"//测试视频播放器
-import SmartHome from "./home/SmartHome.vue"//智能监测项目首页
-import TestEmail from "./email/TestEmail.vue"//测试邮件
+/* 路由统一管理 */
+import router from "./routers";
 
-const router = new VueRouter({ // 定义VueRouter路由对象
-    mode: 'hash', // 前端路由模式为/#/
-    routes: [  // 定义前端路由
-        {
-            path: '/',
-            component: TestEmail,
-        },
-        {
-            path: '/home',
-            component: Home
-        }
-
-    ]
-});
-
-new Vue(Vue.util.extend({router}, Admin)).$mount('#adminindex') // 使用前面定义好的前端路由，以Admin.vue作为最外层的Vue组件，启动Vue编译，并把输出挂在到id为admin的DOM元素上
+new Vue(Vue.util.extend({router}, App)).$mount('#app'); // 使用前面定义好的前端路由，以Admin.vue作为最外层的Vue组件，启动Vue编译，并把输出挂在到id为admin的DOM元素上

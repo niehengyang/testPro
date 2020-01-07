@@ -31,7 +31,7 @@
             onLoginSubmit(){
                 axios.post('/admin/login',this.adminLoginForm)
                     .then((response)=> {
-                        window.location.href = '/admin/'
+                        window.location.href = '/admin/';
                         this.$message.success('登录成功！')
                     })
                     .catch((error)=> {

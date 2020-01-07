@@ -12,16 +12,18 @@
 */
 
 Route::get('/', function () {
-    return view('admin.index');
+    return view('/admin/');
 });
 
-Route::get('/video',function (){
-    redirect('/video');
-});
+/* Home 页 */
+Route::get('/','Admin\IndexController@index');
 
-Auth::routes();
+/* 登录页 */
+Route::get('/login','Admin\LoginController@showLoginForm');
+Route::get('/admin/login','Admin\LoginController@postLogin');
 
-Route::get('/home', 'HomeController@index')->name('home');
+/* 登录后首页 */
+Route::get('/admin/','Admin\AdminController@index');
 
 
 

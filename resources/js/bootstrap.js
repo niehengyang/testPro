@@ -44,13 +44,21 @@ if (token) {
  * allows your team to easily build robust real-time web applications.
  */
 
-// import Echo from 'laravel-echo'
+/**
+ *
+ * 导入Vue 及 Vue Router
+ *
+ */
+window.Vue = require('vue'); //引入Vue
 
-// window.Pusher = require('pusher-js');
+import VueRouter from 'vue-router'; //引入vue-router
+Vue.use(VueRouter); //使用vue-router
 
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: process.env.MIX_PUSHER_APP_KEY,
-//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     encrypted: true
-// });
+/**
+ *
+ * 导入ElementUI
+ *
+ */
+import ElementUI from 'element-ui'; //引入element-ui
+import 'element-ui/lib/theme-chalk/index.css'; //引入element-ui样式文件
+Vue.use(ElementUI); // 使用element-ui

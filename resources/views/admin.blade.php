@@ -6,12 +6,16 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{csrf_token()}}">
-    <title>测试网站后台</title>
+    <meta name="renderer" content="webkit">
+    <title>测试平台首页</title>
     <link rel="stylesheet" href="{{mix('css/admin.css')}}">
-</head>
+    <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.8.2/skins/default/aliplayer-min.css" />
 
+    <script>
+    </script>
+</head>
 <body>
-<div id="adminindex"></div>
+<div id="app"></div>
 <script src="{{mix('js/manifest.js')}}"></script>
 <script src="{{mix('js/vendor.js')}}"></script>
 <script src="{{mix('js/admin.js')}}"></script>

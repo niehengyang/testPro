@@ -1,22 +1,13 @@
-require('../bootstrap');
-window.Vue = require('vue') //引入Vue
+require("../bootstrap");
 
-import VueRouter from 'vue-router' //引入vue-router
-Vue.use(VueRouter) //使用vue-router
-import ElementUI from 'element-ui' //引入element-ui
-import 'element-ui/lib/theme-chalk/index.css' //引入element-ui样式文件
-Vue.use(ElementUI) // 使用element-ui
+/**
+ * 如果用户已经有Token则跳转到管理网站中
+ */
+import TokenFactory from "../utils/tokenfactory";
+if(TokenFactory.getToken()){
+    window.location.href = "/admin/";
+}
 
-import Login from './Login.vue' // 引入App最外层页面组件
+import LoginForm from './Login.vue'
 
-const router = new VueRouter({ // 定义VueRouter路由对象
-    mode: 'hash', // 前端路由模式为/#/
-    routes: [  // 定义前端路由
-        {
-            path: '/login',
-            component: Login
-        }
-    ]
-})
-
-new Vue(Vue.util.extend({router}, Login)).$mount('#adminlogin')
+new Vue(Vue.util.extend({},LoginForm)).$mount('#login');
