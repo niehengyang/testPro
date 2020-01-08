@@ -27,4 +27,4 @@ import Admin from './Admin.vue' // 引入App最外层页面组件
 /* 路由统一管理 */
 import router from "./routers";
 
-new Vue(Vue.util.extend({router}, App)).$mount('#app'); // 使用前面定义好的前端路由，以Admin.vue作为最外层的Vue组件，启动Vue编译，并把输出挂在到id为admin的DOM元素上
+new Vue(Vue.util.extend({router}, Admin)).$mount('#admin'); // 使用前面定义好的前端路由，以Admin.vue作为最外层的Vue组件，启动Vue编译，并把输出挂在到id为admin的DOM元素上

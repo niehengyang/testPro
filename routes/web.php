@@ -16,15 +16,18 @@ Route::get('/', function () {
 });
 
 /* Home 页 */
-Route::get('/','Admin\IndexController@index');
+Route::get('/','HomeController@index');
 
 /* 登录页 */
 Route::get('/login','Admin\LoginController@showLoginForm');
-Route::get('/admin/login','Admin\LoginController@postLogin');
+Route::get('/admin/login','Admin\LoginController@login');
+Route::post('/admin/logout','Admin\LoginController@logout');
 
-/* 登录后首页 */
-Route::get('/admin/','Admin\AdminController@index');
+/* 登录后主页*/
+Route::get('/admin/','Admin\IndexController@index');
 
 
 
 Route::post('/email', 'email\TestController@sendEmail');//测试邮件
+
+Route::post('/video', 'Video\VideoController@index');//测试播放器

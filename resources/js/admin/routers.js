@@ -6,7 +6,7 @@ let routeArray = [
         path: '/',
         beforeEnter: (to, from, next) => {
           //跳转之前的操作
-            return true;
+            next('/')
         }
     }
 ];

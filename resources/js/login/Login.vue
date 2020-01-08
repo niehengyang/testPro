@@ -2,8 +2,8 @@
     <div class="page">
         <div class="login-form-box">
             <el-form ref="adminLoginForm" :model="adminLoginForm" label-width="80px" class="login-form">
-                <el-form-item label="账号名" prop="admin_name">
-                    <el-input class="username-input" v-model="adminLoginForm.admin_name"  placeholder="请输入用户名"></el-input>
+                <el-form-item label="账号名" prop="email">
+                    <el-input class="username-input" v-model="adminLoginForm.email"  placeholder="请输入邮箱"></el-input>
                 </el-form-item>
                 <el-form-item label="密码" prop="password">
                     <el-input class="password-input" type="password" v-model="adminLoginForm.password" placeholder="请输入密码"></el-input>
@@ -21,7 +21,7 @@
         // name: "Login"
         data(){
             return{
-                adminLoginForm: {admin_name: '',password: ''},
+                adminLoginForm: {email: '',password: ''},
             }
         },
         created() {
@@ -47,6 +47,7 @@
         width: 100%
         height: 100%
         .login-form-box
+            padding: 30px
             width: 360px
             height: 300px
             .login-form

@@ -21,7 +21,7 @@
             toLogout(){
                 axios.post('/admin/logout')
                     .then((response)=> {
-                        window.location.href = '/admin/'
+                        window.location.href = '/admin/';
                         this.$message.success('注销成功！')
                     })
                     .catch((error)=> {

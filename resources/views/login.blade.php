@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{csrf_token()}}">
     <meta name="renderer" content="webkit">
     <title>测试登录</title>
-    <link rel="stylesheet" href="{{mix('css/app.css')}}">
+    <link rel="stylesheet" href="{{mix('css/login.css')}}">
     <style>
         body{
             margin: unset;
