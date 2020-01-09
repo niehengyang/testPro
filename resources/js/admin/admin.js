@@ -13,7 +13,6 @@ require("./bootstrap/project");
 /* 看门狗 */
 require("./bootstrap/guard");
 
-
 import VueRouter from 'vue-router' //引入vue-router
 Vue.use(VueRouter); //使用vue-router
 

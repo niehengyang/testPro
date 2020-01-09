@@ -30,4 +30,4 @@ Route::get('/admin/','Admin\IndexController@index');
 
 Route::post('/email', 'email\TestController@sendEmail');//测试邮件
 
-Route::post('/video', 'Video\VideoController@index');//测试播放器
+Route::get('/video', 'Video\VideoController@index');//测试播放器
